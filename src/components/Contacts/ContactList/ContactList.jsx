@@ -1,11 +1,11 @@
 import PropTypes from "prop-types";
-import TodosListItem from "../TodosListItem/TodosListItem";
+import ListItem from "../ListItem/ListItem";
 
 const TodosList = ({ items,  handleDelete }) => {
   return (
     <ul>
       {items.map((item) => (
-        <TodosListItem
+        <ListItem
           key={item.id}
           item={item}
           handleDelete={() => handleDelete(item.id)}
@@ -15,10 +15,10 @@ const TodosList = ({ items,  handleDelete }) => {
   );
 };
 
-// TodosList.propTypes = {
-//   items: PropTypes.arrayOf(PropTypes.shape({ id: PropTypes.string.isRequired }))
-//     .isRequired,
-//   handleDelete: PropTypes.func.isRequired,
-// };
+TodosList.propTypes = {
+  items: PropTypes.arrayOf(PropTypes.shape({ id: PropTypes.string.isRequired }))
+    .isRequired,
+  handleDelete: PropTypes.func.isRequired,
+};
 
 export default TodosList;

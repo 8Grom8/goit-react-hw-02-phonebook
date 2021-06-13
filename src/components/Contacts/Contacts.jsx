@@ -1,17 +1,12 @@
 import { Component } from "react";
 import { v4 as uuid } from "uuid";
 import ContactForm from "./ContactForm/ContactForm";
-import TodosFilter from "./TodosFilter/TodosFilter";
-import TodosList from "./TodosList/TodosList";
+import Filter from "./Filter/Filter";
+import List from "./ContactList/ContactList";
 
 class Todos extends Component {
   state = {
-    items: [
-      { id: "id-1", name: "Rosie Simpson", number: "459-12-56" },
-      { id: "id-2", name: "Hermione Kline", number: "443-89-12" },
-      { id: "id-3", name: "Eden Clements", number: "645-17-79" },
-      { id: "id-4", name: "Annie Copeland", number: "227-91-26" },
-    ],
+    items: [],
     filter: "",
   };
 
@@ -61,8 +56,8 @@ class Todos extends Component {
         <h1>Phonebook</h1>
         <ContactForm handleSubmit={this.handleSubmit} />
         <h2>Contacts</h2>
-        <TodosFilter filter={filter} handleChange={this.handleChange} />
-        <TodosList items={filteredItems} handleDelete={this.handleDelete} />
+        <Filter filter={filter} handleChange={this.handleChange} />
+        <List items={filteredItems} handleDelete={this.handleDelete} />
       </div>
     );
   }

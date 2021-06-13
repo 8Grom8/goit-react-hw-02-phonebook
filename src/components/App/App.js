@@ -1,5 +1,5 @@
 import React from "react";
-import Todos from "../Todos/Todos";
+import Todos from "../Contacts/Contacts";
 
 const App = () => {
   return (

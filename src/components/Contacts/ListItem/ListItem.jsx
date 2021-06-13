@@ -13,12 +13,13 @@ const TodosListItem = ({ item, handleDelete }) => {
   );
 };
 
-// TodosListItem.propTypes = {
-//   item: PropTypes.shape({
-//     id: PropTypes.string.isRequired,
-//     title: PropTypes.string.isRequired,
-//   }).isRequired,
-//   handleDelete: PropTypes.func.isRequired,
-// };
+TodosListItem.propTypes = {
+  item: PropTypes.shape({
+    id: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
+    number: PropTypes.string.isRequired,
+  }).isRequired,
+  handleDelete: PropTypes.func.isRequired,
+};
 
 export default TodosListItem;
