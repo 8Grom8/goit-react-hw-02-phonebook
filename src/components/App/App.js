@@ -1,10 +1,10 @@
 import React from "react";
-import Todos from "../Contacts/Contacts";
+import Contact from "../Contacts/Contacts";
 
 const App = () => {
   return (
-    <div>
-      <Todos />
+    <div className="mainContainer">
+      <Contact />
     </div>
   );
 };
